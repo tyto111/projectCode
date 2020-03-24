@@ -1,0 +1,27 @@
+
+//create member table
+CREATE TABLE members(
+member_id SERIAL PRIMARY KEY,
+first_name VARCHAR(20),
+last_name  VARCHAR(20),
+amount_paid REAL,
+amount_owed REAL);
+
+//create group TABLE
+CREATE TABLE groups(
+group_id SERIAL PRIMARY KEY,
+group_name VARCHAR(60),
+members INTEGER [],
+num_members INTEGER,
+total_expenses REAL
+);
+
+//create transaction TABLE
+CREATE TABLE transactions(
+transaction_id SERIAL PRIMARY KEY,
+group_id INTEGER,
+member_id INTEGER,
+description TEXT,
+amount REAL,
+transaction_date DATE
+);
